@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Battleship</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Miguel Tapia"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="battleship.css" type="text/css" rel="stylesheet"/> <!--EXTERNAL CSS SHEET-->
+	<script src="battleship.js" type="text/javascript"></script>   <!--EXTERNAL JS SHEET-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+</head>
+<body onLoad="generateTables();">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="text-center text-primary"><i class="fas fa-ship"></i> Battleship <i class="fas fa-ship"></i></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 d-flex justify-content-center push">
+				<table id="player" class="text-center mainStyle w-100 h-100"></table></br>
+			</div>
+			<div class="col-lg-6 d-flex justify-content-center push">
+				<table id="computer" class="text-center mainStyle w-100 h-100"></table>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+			<div class="col-lg-12 text-center push">
+				<h3 id="round" class="text-primary">Round: </h3>
+			</div>
+	</div>	
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<select id="shipSelection" class="text-center">
+				<option value="default" selected="selected">Select Ship</option>
+				<option value="carrier">Carrier</option>
+				<option value="battleship">Battleship</option>
+				<option value="cruiser">Cruiser</option>
+				<option value="submarine">Submarine</option>
+				<option value="destroyer">Destroyer</option>
+			</select>
+			<select id="shipOrientation" class="text-center">
+				<option value="default" selected="selected">Select Orientation	</option>
+				<option value="horizontal">Horizontal</option>
+				<option value="vertical">Vertical</option>
+			</select>
+			</br>
+			<input class="push" id="startingPoint" type="text" placeholder="Ex: A4" required/></br>
+			<button onClick="setShip();" class=" push btn">Place Ship</button></br>
+			<button onClick="init();" class="push btn">Begin Game</button>
+		</div>
+	</div>
+</body>
+</html>

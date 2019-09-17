@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Guess a Number</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Miguel Tapia"/>
+	<link type="text/css" rel="stylesheet" href="gnumber.css"/> <!--EXTERNAL CSS SHEET-->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet"/> <!--EXTERNAL FONT-->
+</head>
+<body>
+	<div id="header"> <!--DIVISION FOR SECTION. PRIMARILY USED FOR CSS-->
+		<h1>Guess a Number Game</h1>
+		<h4>By: Miguel Tapia</h4>
+	</div>
+	<div id="instructions"> <!--DIVISION FOR SECTION. PRIMARILY USED FOR CSS-->
+		<h3>Instructions</h3>
+		<p>Welcome to my Guess a Number Game! To <b>begin</b>, select a <u>minimum</u> and <u>maximum</u> range! Once this range is selected, press the <b>Set Interval Button</b> in order to tell the program to generate a random value within that range.</p>
+		<p>The <b>range min</b> should appear next to the <u>Min Value</u>, and the <b>range max</b> should appear next to the <u>Max Value</u>. The <u>Random Numbers Selected</u> will be filled after the number is guessed. Provided you continue to play, <b>all randomly generated numbers</b> will continue to appear there! You can try to re-guess these already randomly generated numbers, but I promise,<b> they won't repeat!</b></p>
+		<p>Finally, it is <b>time to guess</b>. Select a <u>number</u> within the range. The computer will alert whether the number is <b>too big</b> or <b>too small</b>. Make sure you utilize full value integers (Ex: "5"). If you don't do so, the computer will let you know!</p>
+		<h2><center>HOPE YOU ENJOY!</center></h2>
+	</div>
+	<div id="main"> <!--DIVISION FOR SECTION. PRIMARILY USED FOR CSS-->
+		<div id="section1">
+			<h3>Select The RANGE</h2> <br/>
+			<label for="randomNumberMin">Select Number Min</label> <!--LABEL COMPOSITION-->
+			<input type="text" id="randomNumberMin" value=""/> <br/> <br/> <!--ID USED TO TARGET FROM JS AND REFER TO LABEL-->
+			<label for="randomNumberMax">Select Number Max</label>
+			<input type="text" id="randomNumberMax" value=""/> <br/> <br/> <!--ID USED TO TARGET FROM JS AND REFER TO LABEL-->
+			<button onClick="setNumberRange()">Set Interval</button> <br/> <br/> <!--FUNCTION TO SET THE INTERVAL/RANGE-->
+		</div>
+		<div id="section2">
+			<h3>Here are the Mins/Max/Numbers Utilized</h2> <br/>
+			<div id="minBoxDisplay">Min value:</div> <br/> <br/> <!--ID USED TO TARGET FROM JS-->
+			<div id="maxBoxDisplay">Max value:</div> <br/> <br/> <!--ID USED TO TARGET FROM JS-->
+			<div id="usedBoxDisplay">Random Numbers Selected:</div> <br/> <br/> <!--ID USED TO TARGET FROM JS-->
+		</div>
+		<div id="section3">
+			<h3>Take you GUESS</h3> <br/>
+			<label for="guessInput">User Guess</label>
+			<input id="guessInput" type="text"/>  <br/> <br/> <br/> <!--ID USED TO TARGET FROM JS AND REFER TO LABEL-->
+			<button onClick="guessedNumber()">Am I Right?</button> <br/> <br/> <!--FUNCTION TO CHECK/VALIDATE GUESSED NUMBER-->
+		</div>
+	</div>
+	<script type="text/javascript" src="gnumber.js"></script> <!--EXTERNAL JS SHEET-->
+</body>
+</html>

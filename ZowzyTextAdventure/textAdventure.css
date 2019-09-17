@@ -1,0 +1,27 @@
+input, input:focus {
+	border: none;
+	margin-right: 50px;
+}
+
+input:focus {
+	outline: none;
+}
+
+i {
+	margin-right: 10px;
+}
+
+body {
+	padding: 25px;
+	margin: 20px 33%;
+	border: 2px solid black;
+}
+
+.centerAll {
+	align: center;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+}

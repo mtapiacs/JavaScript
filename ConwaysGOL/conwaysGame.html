@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Conway's Game of Life</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Miguel Tapia"/>
+	<link type="text/css" rel="stylesheet" href="conwaysGame.css"/> <!--EXTERNAL CSS SHEET-->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/> <!--EXTERNAL FONT-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/> <!--FONT AWESOME ICON LIBRARY-->
+	<script type="text/javascript" src="conwaysGame.js"></script> <!--EXTERNAL JS SHEET-->
+	<script type="text/javascript" src="underscore-min.js"></script> <!--UNDERSCORE JS SHEET-->
+</head>
+<body onLoad="generateTable();"> <!--CALLS GENERATETABLE() IN ORDER TO CREATE THE ORIGINAL TABLE WITH IDS AND MAIN ARRAY-->
+	<h1>Conway's Game of Life <i class="fas fa-heartbeat fa-lg"></i></h1> <!--CREATES FA ICON FOR AESTHETICS-->
+	<center>
+		<table id="main" class="mainStyle"></table>
+		<br/>
+		<button onClick="checkStates();">Check States Manual</button> <!--CALLS CHECKSTATES() IN ORDER TO CHECK THE TABLE ONE ITERATION AT A TIME-->
+		<select onChange="selectedSeed(this.value);">
+			<option selected="selected">Choose a SEED!</option>
+			<option value="oSeed">Original Seed</option>
+			<option value="glider">Glider</option>
+			<option value="exploder">Exploder</option>
+			<option value="tenCellRow">10 Cell Row</option>
+			<option value="spaceship">Spaceship</option>
+			<option value="tumbler">Tumbler</option>
+			<option value="personal">Personal Seed</option>
+		</select>
+		<button onClick="setInterval(checkStates, 200);">Check States Interval</button> <!--CALLS CHECKSTATES() IN ORDER TO CHECK THE TABLE ON INTERVAL EVERY 200 MILLISECONDS-->
+		<br/>
+		<br/>
+		<div>Iteration Number:</div>
+		<span id="roundCount">0</span> <!--ID USED TO POINT FROM JS TO UPDATE COUNTER-->
+		<br/>
+		<br/>
+		<footer>Created By: <span class="myName">Miguel Tapia</span></footer>
+	</center>
+</body>
+</html>

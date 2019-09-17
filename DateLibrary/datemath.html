@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>Date Math Library</TITLE>
+<META charset="UTF-8" />
+<META name="author" content="student" />
+<META name="description" content="This project will demonstrate the student's ability to 
+create a library of functions for calculating dates, and integrate it with jQuery-UI's 
+datepicker control." />
+<!--SCRIPT src="jqueryui.min.js"></SCRIPT-->
+<SCRIPT src="datemath.js"></SCRIPT>
+<SCRIPT>
+// This function simulates the entry of dates into the text boxes and associated
+// button clicks.  It runs immediately when the page loads.
+// Functions isDateValid(string), dateDifference(string,string), and dateAdd(string,number) are
+// provided by datemath.js.
+function testAll() {
+	var results1 = document.getElementById("Test1Result");
+	var results2 = document.getElementById("Test2Result");
+	var results3 = document.getElementById("Test3Result");
+	
+	// For test 1, create a function in datemath.js called isDateValid, with one parameter.  
+	// It should return either true or false.
+	results1.innerHTML = "Test results: all passed.";
+	if (isDateValid("2020-10-10")!==true) results1.innerHTML = "Test 1 failed to detect a valid date.";
+	if (isDateValid("2020-20-40")!==false) results1.innerHTML = "Test 1 failed to detect an invalid date.";
+	if (isDateValid("2020-02-30")!==false) results1.innerHTML = "Test 1 failed February.";
+	if (isDateValid("2020-02-29")!==true || isDateValid('2021-02-29')!==false) results1.innerHTML = "Test 1 failed leap year.";
+	// You can continue adding more tests here for as many different kinds of crazy input as you can imagine.
+	
+	// For test 2, create a function in datemath.js called dateDifference, with two parameters.
+	// It should return a positive integer if the second date is later, and a negative integer if
+	// the first date is later.`
+	results2.innerHTML = "Test results: all passed.";
+	if ((typeof dateDifference("2020-10-10","2020-12-25"))!="number") results2.innerHTML = "Test 2 failed the integer return test.";
+	if (dateDifference("2020-10-10","2020-10-30")!=20) results2.innerHTML = "Test 2 failed the in month positive test.";
+	if (dateDifference("2020-10-30","2020-10-10")!=-20) results2.innerHTML = "Test 2 failed the in month negative test.";
+	if (dateDifference("2020-10-10","2020-11-10")!=31) results2.innerHTML = "Test 2 failed the cross month positive test.";
+	if (dateDifference("2020-11-10","2020-10-10")!=-31) results2.innerHTML = "Test 2 failed the cross month negative test.";
+	// You can continue adding more tests here for as many different kinds of crazy input as you can imagine.
+
+	// For test 3, create a function in datemath.js called dateAdd, with two parameters.
+	// It should return a new date calculated from the positive or negative number of days given.
+	results3.innerHTML = "Test results: all passed.";
+	if (dateAdd("2020-10-10",20)!="2020-10-30") results3.innerHTML = "Test 3 failed the in month positive test.";
+	if (dateAdd("2020-10-30",-20)!="2020-10-10") results3.innerHTML = "Test 3 failed the in month negative test.";
+	if (dateAdd("2020-10-10",31)!="2020-11-10") results3.innerHTML = "Test 3 failed the cross month positive test.";
+	if (dateAdd("2020-11-10",-31)!="2020-10-10") results3.innerHTML = "Test 3 failed the cross month negative test.";
+	// You can continue adding more tests here for as many different kinds of crazy input as you can imagine.
+	
+	results1 = results2 = results3 = null;
+}
+function onClickValidateButton() {
+	var inputDate = document.getElementById("date1").value;
+	var output = document.getElementById("Test1Result");
+	if (isDateValid(inputDate)) output.innerHTML = "The date you entered is valid.";
+	else output.innerHTML = "That is not a valid date.";
+	inputDate = output = null;
+}
+function onClickDateDifference() {
+	var inputDate1 = document.getElementById("date2a").value;
+	var inputDate2 = document.getElementById("date2b").value;
+	var output = document.getElementById("Test2Result");
+	output.innerHTML = "There is/are "+dateDifference(inputDate1,inputDate2)+" day(s) between "+inputDate1+" and "+inputDate2;
+	inputDate1 = inputDate2 = output = null;
+}
+function onClickDateAdd() {
+	var inputDate1 = document.getElementById("date3a").value;
+	var inputDate2 = document.getElementById("date3b").value;
+	var output = document.getElementById("Test3Result");
+	output.innerHTML = "The new date is "+dateAdd(inputDate1,inputDate2);
+	inputDate1 = inputDate2 = output = null;
+}
+</SCRIPT>
+</HEAD>
+<BODY onLoad="testAll();">
+	<P>The dates must be in YEAR-MONTH-DAY FORMAT</P>
+<B>1. Create a function that will check the validity of a date.</B><BR />
+<DIV id="Test1Result">Test results: missing</DIV>
+Enter a date:<INPUT type="text" id="date1" placeholder="YEAR-MT-DY"/><BUTTON onClick="onClickValidateButton();">Check the date</BUTTON><BR />
+<BR />
+<B>2. Create a function that will calculate the difference between two dates.</B><BR />
+<DIV id="Test2Result">Test results: missing</DIV>
+Enter 2 dates:<INPUT type="text" id="date2a" placeholder="YEAR-MT-DY"/><INPUT type="text" id="date2b" placeholder="YEAR-MT-DY"/>
+<BUTTON onClick="onClickDateDifference();">Calculate the difference</BUTTON><BR />
+<BR />
+<B>3. Create a function that will calculate a new date given a date and number of days.</B><BR />
+<DIV id="Test3Result">Test results: missing</DIV>
+Enter a date:<INPUT type="text" id="date3a" placeholder="YEAR-MT-DY"/>&nbsp;Enter a number of days:<INPUT type="text" id="date3b" placeholder="Ex: 50"/>
+<BUTTON onClick="onClickDateAdd();">Calculate the new date</BUTTON><BR />
+<BR />
+</BODY>
+</HTML>

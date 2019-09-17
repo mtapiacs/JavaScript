@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Zowzy Adventure Game</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Miguel Tapia"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"/> <!--FONT AWESOME LIBRARY-->
+	<link href="textAdventure.css" type="text/css" rel="stylesheet"/> <!--EXTERNAL CSS SHEET-->
+	<script src="textAdventure.js" type="text/javascript"></script> <!--EXTERNAL JS SHEET-->
+</head>
+<body onLoad="init();"> <!--CALLS INIT() FUNCTION TO BEGIN THE GAME-->
+	<div class="centerAll">
+		<h1>Welcome to Zowzy</h1>
+		<p><b>Commands:</b> N, S, E, W, Inventory, Check, Look, Examine, Take, Open, Watch TV</p>
+		<p id="currentState"><b>Where am I? </b></p>
+		<i class="fas fa-angle-double-right fa-sm"></i><input id="commandBox" placeholder="Your call boss"/>
+	</div>
+</body>
+</html>

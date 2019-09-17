@@ -1,0 +1,43 @@
+.toggle { /*USED TO MAKE DIVS VISIBLE*/
+	display: block;
+}
+
+.cover { /*USED TO MAKE DIVS INVISIBLE*/
+	display: none;
+}
+
+.rselect { 
+	text-align: center;
+	margin-top: 20px;
+}
+
+input[type="radio"] { /*SELECTS THE INPUTS WITH THE TYPE RADIO IN ORDER TO SPACE THEM OUT*/
+	margin-bottom: 20px;
+}
+
+body { /*STYLES THE BODY TO MAKE IT CENTERED AND SIMPLE*/
+	border: 2.5px solid black;
+	padding: 1px 50px 50px 50px;
+	margin: 2% 30%;
+	font-family: 'Roboto', sans-serif
+}
+
+h1{
+	font-size: 50px;
+	font-weight: 700;
+	text-align: center;
+	margin: auto;
+	padding: 15px;
+}
+
+h2 {
+	margin: 5px;
+	font-weight: 400;
+	padding: 15px 0;
+}
+
+h4 {
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 20px;
+}

@@ -1,0 +1,78 @@
+body {
+	padding: 1% 10%;
+	background: #2c3e50;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3498db, #04417e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*#3498db, #2c3e50*/
+	
+}
+
+table { /*GIVES TABLE STYLING*/
+	border: 8px solid rgb(255, 255, 255);
+	border-collapse: collapse; /*https://www.w3schools.com/cssref/pr_border-collapse.asp //https://www.w3schools.com/css/css_table.asp*/
+	/*height: 500px;*/
+	/*width: 500px;*/
+}
+
+td, th	 { /*ESTABLISHES CELL HEIGHT AND WIDTH*/
+	/*height: 30px;*/
+	/*width: 30px;*/
+	height: 5%;
+	width: 5%;
+    border: 2px solid white;
+}
+
+.mainStyle { /*GIVES BACKGROUND FOR TABLE*/
+	background-color: rgba(199, 205, 221, 0.602);
+	max-width: 80% !important;
+}
+
+#0P0 {
+   display: none;
+}
+
+#round {
+	font-size: 45px;
+}
+.centerElement {
+    margin: 0 auto;
+    /*width: 800px;*/
+}
+
+.activeShip {
+	background-color: rgb(255, 255, 255);
+}
+
+.eActiveShip {
+	
+}
+
+.missedShot {
+	background-color: orange;
+}
+
+.hitShot {
+	background-color: red;
+}
+
+.push {
+	margin-top: 1%;
+}
+
+#shipSelection {
+	margin-top: 2%;
+}
+
+.text-primary {
+	font-family: Verdana;
+	color: rgb(255, 255, 255) !important;
+	-webkit-text-stroke: 3px black;
+	font-size: 70px;
+	font-weight: bold;
+}
+
+input {
+	width: 5%;
+	border-radius: 5%;
+	text-align: center;
+}

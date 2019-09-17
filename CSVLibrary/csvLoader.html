@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Date Library</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Miguel Tapia"/>
+	<script type="text/javascript" src="csvLoader.js"></script>
+	<link href="style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	Select a CSV file to display as a table below. </br>
+		<input type="file" id="filePicker"/><button onClick="displayFile();">Load the File</button>
+		<div id="hoverdata" style="background: yellow; font-weight: bold;"></div>
+		<div id="fileContents"></div>
+		<canvas id="canvasTemperature" width="400" height="300"></canvas>
+		<canvas id="canvasHumidity" width="400" height="300"></canvas>
+		<canvas id="canvasPrecipitation" width="400" height="300"></canvas>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Conversions Calculator</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Miguel Tapia"	/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> <!--EXTERNAL FONT-->
+	<link type="text/css" rel="stylesheet" href="conversions.css"> <!--EXTERNAL CSS SHEET-->
+	<script type="text/javascript" src="conversions.js"></script> <!--EXTERNAL JS SHEET-->
+</head>
+<body>
+	<h1>Conversions Calculator</h1>
+		<div class="rselect"> <!--CSS CLASS SELECTOR FOR RADIO BUTTONS STYLING-->
+			<label for="cfcalc">Celsius/Fahrenheit Conversion</label> <!--LABEL MUST MATCH INPUT FOR ACCESIBILITY AND PAIRING. THIS IS ACCOMPLISHED THROUGH "FOR" AND "ID" MATCHING-->
+			<input type="radio" id="cfcalc" name="conversions" onClick="show1()"/> <!--RADIO BUTTONS NAME MUST MATCH IN ORDER TO ALLOW ONLY ONE SELECTION AT A TIME. SHOW FUNCTION DISPLAYS AND HIDES CALCULATORS-->
+	
+			<label for="mfcalc">Meters/Feet Conversion</label>
+			<input type="radio" id="mfcalc" name="conversions" onClick="show2()"/>
+			<br/>
+			<label for="pkcalc">Pounds/Kilogram Conversion</label>
+			<input type="radio" id="pkcalc" name="conversions" onClick="show3()"/>
+		
+			<label for="mccalc">Pesos/Dollars Conversion</label>
+			<input type="radio" id="mccalc" name="conversions" onClick="show4()"/>
+		</div>
+		
+	<div id="cnf" class="cover"> <!--COVER STYLE SELECTOR MAKES THE DIV'S DEFAULT DISPLAY TO "NONE" THE IDS ARE USED TO TARGET THE DIVS--> 
+		<h2>Celsius to Fahrenheit</h2>
+			<input type="text" id="box1" value="0" class="inputClass"/> Celsius is <!--BOX ID USED FOR ACTUAL CALCULATOR CALCULATIONS-->
+			<input type="text" id="box2" value="" class="inputClass"/> degrees Fahrenheit
+			<button onClick="cfahrenheit()">Convert!</button> <!--Function: Class example to remember how to call the function on click-->
+		<h2>Fahrenheit to Celsius</h2>
+			<input type="text" id="box3" value="32" class="inputClass"/> Fahrenheit is
+			<input type="text" id="box4" value="" class="inputClass"/> degrees Celsius
+			<button onClick="fcelsius()">Convert!</button> <!--Function-->
+	</div>
+	
+	<div id="mnf" class="cover">
+		<h2>Meters to Feet</h2>
+			<input type="text" id="box5" value="" class="inputClass"/> Meters is
+			<input type="text" id="box6" value="" class="inputClass"/> Feet
+			<button onClick="mfeet()">Convert!</button> <!--Function-->
+		<h2>Feet to Meters</h2>
+			<input type="text" id="box7" value="" class="inputClass"/> Feets is
+			<input type="text" id="box8" value="" class="inputClass"/> Meters
+			<button onClick="fmeters()">Convert!</button> <!--Function-->
+	</div>
+	
+	<div id="pnk" class="cover">
+		<h2>Pounds to Kilograms</h2>
+			<input type="text" id="box9" value="" class="inputClass"/> Pounds is
+			<input type="text" id="box10" value="" class="inputClass"/> Kilograms
+			<button onClick="pkilo()">Convert!</button> <!--Function-->
+		<h2>Kilograms to Pounds</h2>
+			<input type="text" id="box11" value="" class="inputClass"/> Kilograms is
+			<input type="text" id="box12" value="" class="inputClass"/> Pounds
+			<button onClick="kpounds()">Convert!</button> <!--Function-->
+	</div>
+	
+	<div id="mnc" class="cover">
+		<h2>Dominican Peso to Dollars</h2>
+			<input type="text" id="box13" value="" class="inputClass"/> Dominican Pesos is
+			<input type="text" id="box14" value="" class="inputClass"/> US Dollars 
+			<button onClick="pdollars()">Convert!</button> <!--Function-->
+		<h2>Dollars to Dominican Peso</h2>
+			<input type="text" id="box15" value="" class="inputClass"/> Dollars is
+			<input type="text" id="box16" value="" class="inputClass"/> Dominican Pesos
+			<button onClick="dpesos()">Convert!</button> <!--Function-->
+	</div>
+	
+	<center>
+		<button onClick="clearCells();">Clear</button>
+	</center>
+	<h4>Miguel Tapia</h4>
+	<!--I UTILIZED THE CLASS EXAMPLE IN ORDER TO KNOW HOW TO CALL A FUNCTION ONCLICK;-->
+</body>
+</html>
