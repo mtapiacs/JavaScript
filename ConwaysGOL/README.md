@@ -1,5 +1,4 @@
 # Conway's Game of Life
-
-* Underscore.js, JavaScript, HTML, CSS
-* Heavy use of array manipulation
-* Fully Responsive 
+* __Action:__ Conway's Game of Life Simulator. Showcases exponential growth in ecosystems.
+* __Built With:__ HTML5, CSS3, JavaScript, Underscore.js
+* __Developed:__ Multi-Dimension Arrays, Responsive Design, DOM Manipulation
