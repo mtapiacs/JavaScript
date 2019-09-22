@@ -1,8 +1,3 @@
-
-* HTML, CSS, JavaScript
-* Utilizes split and join 
-* Reverses any string given
-
 # Reverse It Project
 * __Action:__ Reverses any string.
 * __Built With:__ HTML5, CSS3, JavaScript
