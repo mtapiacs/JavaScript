@@ -1,4 +1,4 @@
 # CSV Library 
-* This is a csv library that processes CSV file
-* Built with file picker and Canvas
-* Created with JavaScript
+* __Action:__ CSV library that processes a CSV file and displays graphs.
+* __Built With:__ JavaScript and JS Canvas
+* __Developed:__ Software Graphics and File Processing
