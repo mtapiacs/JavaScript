@@ -1,4 +1,4 @@
 # Date Math Project
-* Built with Test Driven Development
-* Checks for date validity, date changes, et cetera.
-* Fully functioning. Incorporates date object.
+* __Action:__ Checks for data validity, date changes, future dates, etc.
+* __Built With:__ HTML5, CSS3, JavaScript
+* __Developed:__ Test Driven Development, Procedual Programming
